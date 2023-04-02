@@ -23,6 +23,20 @@ class Game:
         self.TEXT_C = (240, 240, 240)
         self.RESULT_C = (255, 70, 70)
 
+        pygame.init()
+
+        self.open_img = pygame.image.load('images/type-speed-open.png')
+        self.open_img = pygame.transform.scale(self.open_img, (self.w, self.h))
+
+        self.bg = pygame.image.load('images/background.jpg')
+        self.bg = pygame.transform.scale(self.bg, (500,750))
+        self.screen = pygame.display.set_mode((self.w, self.h))
+        pygame.display.set_caption('Type Speed test')
+
+    
+
+
+
 
 if __name__ == "__main__":
     game = Game()
